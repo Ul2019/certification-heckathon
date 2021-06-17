@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Acess</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        /*styling the video frame*/
+        body {
+            background: linear-gradient(135deg, navy, lightblue);
+        }
+
+        .videoObject {
+            border: 12px solid #222;
+            background: grey;
+            height: 200;
+            width: 300;
+        }
+
+        .btn {
+            height: 50px;
+            width: 100px;
+            margin-top: 300px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, navy, lightblue);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .continue {
+            background: linear-gradient(135deg, navy, lightblue);
+            margin-top: 300px;
+            height: 50px;
+            width: 100px;
+            border-radius: 1;
+        }
+
+        .canvas {
+            border: 12px solid #222;
+            background: grey;
+            height: 300;
+            width: 300;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!--making video object to display video-->
+
+    <div class="videoObject">
+        <video id="videoElement" autoplay="true" width="300" height="200"></video>
+    </div>
+
+    <!--Now capture the Image-->
+
+    <!--creating a button to capture the Image-->
+
+    <button id="capture" class="btn">Capture Image</button>
+
+    <!--canvas to display the captured picture-->
+
+    <canvas id="image" class="canvas"></canvas>
+    <!--continue button-->
+    <p id="demo">Click me.</p>
+    <a href="upload.html"><button class="continue">continue</button></a>
+
+    <script>
+
+
+        document.getElementById("demo").onclick = function () { myFunction() };
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "thank you for verifying , in order to proceed please press the continue button!";
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
